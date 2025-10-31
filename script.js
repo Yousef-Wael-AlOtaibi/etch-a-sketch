@@ -6,14 +6,8 @@ function colorDiv(event){
     ${(Math.random()*256)+1}`;
     div.style.backgroundColor = randomColor;
 }
-function cleanDiv(event){
-    console.log('Left div')
-    const div = event.target;
-    div.style.backgroundColor = 'white';
-}
-grid.addEventListener('mouseenter',colorDiv);
-grid.addEventListener('mouseleave',cleanDiv);
 for(let i = 0; i<256; i++){
     const div = document.createElement('div');
+    div.addEventListener('mouseenter',colorDiv);
     grid.appendChild(div);
 }
