@@ -1,9 +1,9 @@
 const grid = document.querySelector('#grid');
 function colorDiv(event){
     const div = event.target;
-    const randomColor = `rgb(${(Math.random()*256)+1},
-    ${(Math.random()*256)+1},
-    ${(Math.random()*256)+1}`;
+    const randomColor = `rgb(${(Math.random()*256)},
+    ${(Math.random()*256)},
+    ${(Math.random()*256)}`;
     div.style.backgroundColor = randomColor;
 }
 for(let i = 0; i<256; i++){
