@@ -46,4 +46,10 @@ document.addEventListener('keydown',(e)=>{
     if(e.key === 't'){
         toggleColoring();
     }
+    if(e.key === 'r'){
+        randomColoring.checked = !randomColoring.checked;
+    }
+    if(e.key === 'c'){
+        colorInput.showPicker();
+    }
 })
