@@ -40,3 +40,8 @@ reformGridBtn.addEventListener('click', () => {
     formGrid(squares);
 })
 toggleColoringBtn.addEventListener('click', toggleColoring);
+document.addEventListener('keydown',(e)=>{
+    if(e.key === 't'){
+        toggleColoring();
+    }
+})
