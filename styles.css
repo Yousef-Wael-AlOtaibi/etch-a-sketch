@@ -1,12 +1,12 @@
 #grid{
-    width:760px;
-    height:600px;
+    width:350px;
+    height:350px;
     border:2px solid black;
     display:flex;
     flex-wrap:wrap;
 }
 #grid div{
-    border:0.5px solid black;
+    border:1px solid black;
     width:20px;
     height:auto;
 }
