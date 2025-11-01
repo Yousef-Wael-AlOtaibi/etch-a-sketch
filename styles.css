@@ -10,3 +10,11 @@
     width:20px;
     height:auto;
 }
+.red-btn{
+    color:white;
+    background-color: red;
+}
+.green-btn{
+    color:black;
+    background-color: rgb(0, 255, 55);
+}

@@ -9,6 +9,8 @@ function toggleColoring(){
     toggleColoringBtn.textContent = isColoring ?
     'Stop coloring' :
     'Start Coloring';
+    toggleColoringBtn.classList.toggle('green-btn')
+    toggleColoringBtn.classList.toggle('red-btn')
 }
 function colorDiv(event){
     if(!isColoring)return;
