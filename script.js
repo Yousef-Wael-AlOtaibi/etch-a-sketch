@@ -1,11 +1,20 @@
 const grid = document.querySelector('#grid');
 const reformGridBtn = document.querySelector('#reform-grid-btn');
+const colorInput = document.querySelector('#color-input');
+const randomColoring = document.querySelector('#random-coloring');
 function colorDiv(event){
     const div = event.target;
-    const randomColor = `rgb(${(Math.random()*256)},
-    ${(Math.random()*256)},
-    ${(Math.random()*256)}`;
-    div.style.backgroundColor = randomColor;
+    const isRandomColoringOn = randomColoring.checked;
+    let divColor;
+    if(isRandomColoringOn){   
+        divColor = `rgb(${(Math.random()*256)},
+        ${(Math.random()*256)},
+        ${(Math.random()*256)}`;
+    }
+    else{;
+        divColor = colorInput.value;
+    }
+    div.style.backgroundColor = divColor;
 }
 function formGrid(squares){
     grid.replaceChildren('');
