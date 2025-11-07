@@ -3,12 +3,15 @@
     height:350px;
     border:2px solid black;
     display:flex;
-    flex-wrap:wrap;
+    flex-flow:column wrap;
 }
-#grid div{
+.parent{
+    display: flex;
+    flex: 1;
+}
+.parent div{
+    flex: 1 20px;
     border:1px solid black;
-    width:20px;
-    height:auto;
 }
 .red-btn{
     color:white;

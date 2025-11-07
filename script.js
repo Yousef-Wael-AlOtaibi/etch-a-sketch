@@ -29,16 +29,22 @@ function colorDiv(event){
 }
 function formGrid(squares){
     grid.replaceChildren('');
-    for(let i = 0; i<squares*squares; i++){
-    const div = document.createElement('div');
-    div.addEventListener('mouseenter',colorDiv);
-    grid.appendChild(div);
-}
+    for(let i = 0; i<squares; i++){
+        const parentDiv = document.createElement('div');
+        parentDiv.classList.add('parent')
+        for(let j = 0; j<squares; j++){
+            const div = document.createElement('div');
+            div.addEventListener('mouseenter',colorDiv);
+            parentDiv.appendChild(div);
+        }
+        grid.appendChild(parentDiv);
+    }
 }
 formGrid(16);
 reformGridBtn.addEventListener('click', () => {
     let squares = +prompt('How many squares per side do you want now? (max 100x100 cuz performance)');
     if(squares > 100)squares = 100;
+    if(!squares)return;
     formGrid(squares);
 })
 toggleColoringBtn.addEventListener('click', toggleColoring);
