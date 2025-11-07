@@ -1,9 +1,40 @@
 const grid = document.querySelector('#grid');
+const gridSizes = {
+    small:{
+        width:352,
+        height:352,
+        squares:16,
+    },
+    medium:{
+        width:512,
+        height:352,
+        squares:24,
+    },
+    large:{
+        width:768,
+        height:352,
+        squares:32,
+    },
+    'extra-large':{
+        width:960,
+        height:352,
+        squares:38,
+    }
+}
+const sizeBtns = document.querySelector('#grid-sizes').children;
+[...sizeBtns].forEach(btn=>btn.addEventListener('click',()=>{
+    sizeGrid(gridSizes[btn.value]);
+    formGrid(gridSizes[btn.value].squares);
+}))
 const reformGridBtn = document.querySelector('#reform-grid-btn');
 const colorInput = document.querySelector('#color-input');
 const randomColoring = document.querySelector('#random-coloring');
 const toggleColoringBtn = document.querySelector('#toggle-coloring-btn');
 let isColoring = true;
+function sizeGrid(size){
+    grid.style.width = `${size.width}px`;
+    grid.style.height =  `${size.height}px`;
+}
 function toggleColoring(){
     isColoring = !isColoring;
     toggleColoringBtn.textContent = isColoring ?
