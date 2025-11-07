@@ -1,6 +1,6 @@
 #grid{
-    width:350px;
-    height:350px;
+    width:352px;
+    height:352px;
     border:2px solid black;
     display:flex;
     flex-flow:column wrap;
@@ -10,7 +10,7 @@
     flex: 1;
 }
 .parent div{
-    flex: 1 20px;
+    flex: 1 auto;
     border:1px solid black;
 }
 .red-btn{
